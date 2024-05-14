@@ -29,6 +29,7 @@ async def img_rename_and_tag(zip_file: UploadFile, tag_name: str):
                     new_file.write(file.read())
                     new_file.close()
 
+                # Add tag to image
                 img = Image.open(new_name)
                 img_draw = ImageDraw.Draw(img)
                 font = ImageFont.truetype(
